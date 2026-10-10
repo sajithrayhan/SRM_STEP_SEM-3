@@ -24,7 +24,11 @@ public class TypingSpeedTestAccuracyChecker {
     }
 
     public static void main(String[] args) {
-        checkTypingAccuracy("hello world", "hello worlt");
-        checkTypingAccuracy("coding", "coding");
+        try {
+            checkTypingAccuracy("hello world", "hello worlt");
+            checkTypingAccuracy("coding", "coding");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

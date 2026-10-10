@@ -12,8 +12,12 @@ public class ReverseCustomerName {
     }
 
     public static void main(String[] args) {
-        String customerName = "Sunil";
-        System.out.println("Original Name: " + customerName);
-        System.out.println("Reversed Name: " + reverseCustomerName(customerName));
+        try {
+            String customerName = "Sunil";
+            System.out.println("Original Name: " + customerName);
+            System.out.println("Reversed Name: " + reverseCustomerName(customerName));
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

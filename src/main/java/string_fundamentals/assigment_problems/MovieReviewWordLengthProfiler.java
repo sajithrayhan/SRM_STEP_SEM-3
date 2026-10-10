@@ -23,6 +23,10 @@ public class MovieReviewWordLengthProfiler {
     }
 
     public static void main(String[] args) {
-        classifyWordLengths("This movie was absolutely fantastic and thrilling");
+        try {
+            classifyWordLengths("This movie was absolutely fantastic and thrilling");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

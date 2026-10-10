@@ -26,7 +26,11 @@ public class FirstNonRepeatingCharacter {
     }
 
     public static void main(String[] args) {
-        report("swiss");
-        report("aabbcc");
+        try {
+            report("swiss");
+            report("aabbcc");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

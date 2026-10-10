@@ -30,7 +30,11 @@ public class ExamHallSeatDuplicationChecker {
     }
 
     public static void main(String[] args) {
-        checkDuplicateSeats(new int[]{101, 102, 103, 102, 105});
-        checkDuplicateSeats(new int[]{101, 102, 103, 104, 105});
+        try {
+            checkDuplicateSeats(new int[]{101, 102, 103, 102, 105});
+            checkDuplicateSeats(new int[]{101, 102, 103, 104, 105});
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

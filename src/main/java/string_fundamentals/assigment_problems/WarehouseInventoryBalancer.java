@@ -33,6 +33,10 @@ public class WarehouseInventoryBalancer {
     }
 
     public static void main(String[] args) {
-        analyzeInventory(new int[]{20, 15, 30}, new int[]{25, 10, 30});
+        try {
+            analyzeInventory(new int[]{20, 15, 30}, new int[]{25, 10, 30});
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

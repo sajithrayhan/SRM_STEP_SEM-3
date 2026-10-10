@@ -19,8 +19,12 @@ public class BmiCalculatorForATeam {
     }
 
     public static void main(String[] args) {
-        double[] heights = {1.75, 1.60, 1.82, 1.55, 1.68, 1.90, 1.72, 1.63, 1.78, 1.58};
-        double[] weights = {70, 90, 64, 40, 75, 95, 82, 58, 110, 52};
-        printWellnessReport(heights, weights);
+        try {
+            double[] heights = {1.75, 1.60, 1.82, 1.55, 1.68, 1.90, 1.72, 1.63, 1.78, 1.58};
+            double[] weights = {70, 90, 64, 40, 75, 95, 82, 58, 110, 52};
+            printWellnessReport(heights, weights);
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

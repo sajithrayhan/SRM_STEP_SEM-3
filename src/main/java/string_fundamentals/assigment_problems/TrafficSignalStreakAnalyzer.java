@@ -25,7 +25,11 @@ public class TrafficSignalStreakAnalyzer {
     }
 
     public static void main(String[] args) {
-        findLongestStreak("RRGGGYRR");
-        findLongestStreak("RRRRYYGG");
+        try {
+            findLongestStreak("RRGGGYRR");
+            findLongestStreak("RRRRYYGG");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

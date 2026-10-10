@@ -53,7 +53,11 @@ public class PalindromeChecker {
     }
 
     public static void main(String[] args) {
-        report("madam");
-        report("hello");
+        try {
+            report("madam");
+            report("hello");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }
