@@ -29,13 +29,19 @@ public class RockPaperScissorsGame {
             String[] results = new String[rounds];
             Random random = new Random();
 
-            int wins = 0, losses = 0, draws = 0;
+            int wins = 0;
+            int losses = 0;
+            int draws = 0;
             for (int i = 0; i < rounds; i++) {
                 computerMoves[i] = randomComputerMove(random);
                 results[i] = playRound(playerMoves[i], computerMoves[i]);
-                if (results[i].equals("Player Wins")) wins++;
-                else if (results[i].equals("Computer Wins")) losses++;
-                else draws++;
+                if (results[i].equals("Player Wins")) {
+                    wins++;
+                } else if (results[i].equals("Computer Wins")) {
+                    losses++;
+                } else {
+                    draws++;
+                }
             }
 
             System.out.println("Round | Player Move | Computer Move | Result");
