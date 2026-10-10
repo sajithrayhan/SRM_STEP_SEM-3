@@ -77,8 +77,12 @@ public class ExaminationQuestionGrader {
                     matched++;
                 }
             }
-            if (matched >= 2) return points * 0.75;
-            if (matched == 1) return points * 0.50;
+            if (matched >= 2) {
+                return points * 0.75;
+            }
+            if (matched == 1) {
+                return points * 0.50;
+            }
             return 0;
         }
     }
