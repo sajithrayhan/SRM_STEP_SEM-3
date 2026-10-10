@@ -22,18 +22,36 @@ public class TravelBookingWithCommonFee {
     }
 
     static class BusBooking extends Booking {
-        BusBooking(double km) { super(km); }
-        double baseFare() { return 2 * distanceKm; }
+        BusBooking(double km) {
+            super(km);
+        }
+
+        @Override
+        double baseFare() {
+            return 2 * distanceKm;
+        }
     }
 
     static class TrainBooking extends Booking {
-        TrainBooking(double km) { super(km); }
-        double baseFare() { return 1.5 * distanceKm; }
+        TrainBooking(double km) {
+            super(km);
+        }
+
+        @Override
+        double baseFare() {
+            return 1.5 * distanceKm;
+        }
     }
 
     static class FlightBooking extends Booking {
-        FlightBooking(double km) { super(km); }
-        double baseFare() { return 2500 + 4 * distanceKm; }
+        FlightBooking(double km) {
+            super(km);
+        }
+
+        @Override
+        double baseFare() {
+            return 2500 + 4 * distanceKm;
+        }
     }
 
     static Booking create(String mode, double km) {

@@ -24,7 +24,11 @@ public class WeeklyStaffPay {
             this.weeklySalary = weeklySalary;
         }
 
-        double pay() { return weeklySalary; }
+
+        @Override
+        double pay() {
+            return weeklySalary;
+        }
     }
 
     static class HourlyStaff extends Staff {
@@ -36,6 +40,8 @@ public class WeeklyStaffPay {
             this.rate = rate;
         }
 
+
+        @Override
         double pay() {
             double regular = Math.min(hours, 40);
             double overtime = Math.max(hours - 40, 0);
@@ -51,7 +57,11 @@ public class WeeklyStaffPay {
             this.stipend = stipend;
         }
 
-        double pay() { return stipend; }
+
+        @Override
+        double pay() {
+            return stipend;
+        }
     }
 
     public static void main(String[] args) {

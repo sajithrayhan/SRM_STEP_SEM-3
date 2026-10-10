@@ -16,8 +16,12 @@ public class ElectricityConnectionBilling {
     }
 
     static class HomeConnection extends Connection {
-        HomeConnection(double units) { super(units); }
+        HomeConnection(double units) {
+            super(units);
+        }
 
+
+        @Override
         double bill() {
             double first = Math.min(units, 100);
             double rest = Math.max(units - 100, 0);
@@ -26,13 +30,25 @@ public class ElectricityConnectionBilling {
     }
 
     static class ShopConnection extends Connection {
-        ShopConnection(double units) { super(units); }
-        double bill() { return units * 8 + 100; }
+        ShopConnection(double units) {
+            super(units);
+        }
+
+        @Override
+        double bill() {
+            return units * 8 + 100;
+        }
     }
 
     static class FactoryConnection extends Connection {
-        FactoryConnection(double units) { super(units); }
-        double bill() { return Math.max(units * 6, 1000); }
+        FactoryConnection(double units) {
+            super(units);
+        }
+
+        @Override
+        double bill() {
+            return Math.max(units * 6, 1000);
+        }
     }
 
     static Connection create(String type, double units) {

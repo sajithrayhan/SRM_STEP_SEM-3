@@ -27,18 +27,36 @@ public class CityCabFareMeter {
     }
 
     static class Mini extends Cab {
-        Mini(double km) { super(km); }
-        double ratePerKm() { return 10; }
+        Mini(double km) {
+            super(km);
+        }
+
+        @Override
+        double ratePerKm() {
+            return 10;
+        }
     }
 
     static class Sedan extends Cab implements NightService {
-        Sedan(double km) { super(km); }
-        double ratePerKm() { return 14; }
+        Sedan(double km) {
+            super(km);
+        }
+
+        @Override
+        double ratePerKm() {
+            return 14;
+        }
     }
 
     static class Suv extends Cab implements NightService {
-        Suv(double km) { super(km); }
-        double ratePerKm() { return 18; }
+        Suv(double km) {
+            super(km);
+        }
+
+        @Override
+        double ratePerKm() {
+            return 18;
+        }
     }
 
     static Cab create(String type, double km) {

@@ -25,8 +25,16 @@ public class GardenPlotAreaReport {
             this.radius = radius;
         }
 
-        String shape() { return "CIRCLE"; }
-        double area() { return Math.PI * radius * radius; }
+
+        @Override
+        String shape() {
+            return "CIRCLE";
+        }
+
+        @Override
+        double area() {
+            return Math.PI * radius * radius;
+        }
     }
 
     static class RectanglePlot extends Plot {
@@ -38,8 +46,16 @@ public class GardenPlotAreaReport {
             this.width = width;
         }
 
-        String shape() { return "RECTANGLE"; }
-        double area() { return length * width; }
+
+        @Override
+        String shape() {
+            return "RECTANGLE";
+        }
+
+        @Override
+        double area() {
+            return length * width;
+        }
     }
 
     static class TrianglePlot extends Plot {
@@ -51,8 +67,16 @@ public class GardenPlotAreaReport {
             this.height = height;
         }
 
-        String shape() { return "TRIANGLE"; }
-        double area() { return 0.5 * base * height; }
+
+        @Override
+        String shape() {
+            return "TRIANGLE";
+        }
+
+        @Override
+        double area() {
+            return 0.5 * base * height;
+        }
     }
 
     public static void main(String[] args) {

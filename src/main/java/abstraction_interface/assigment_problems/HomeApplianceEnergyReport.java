@@ -30,23 +30,47 @@ public class HomeApplianceEnergyReport {
     }
 
     static class Fridge extends Appliance {
-        Fridge(double h) { super(h); }
-        double watts() { return 150; }
+        Fridge(double h) {
+            super(h);
+        }
+
+        @Override
+        double watts() {
+            return 150;
+        }
     }
 
     static class AirConditioner extends Appliance implements SaverMode {
-        AirConditioner(double h) { super(h); }
-        double watts() { return 1500; }
+        AirConditioner(double h) {
+            super(h);
+        }
+
+        @Override
+        double watts() {
+            return 1500;
+        }
     }
 
     static class Tv extends Appliance {
-        Tv(double h) { super(h); }
-        double watts() { return 100; }
+        Tv(double h) {
+            super(h);
+        }
+
+        @Override
+        double watts() {
+            return 100;
+        }
     }
 
     static class WashingMachine extends Appliance implements SaverMode {
-        WashingMachine(double h) { super(h); }
-        double watts() { return 500; }
+        WashingMachine(double h) {
+            super(h);
+        }
+
+        @Override
+        double watts() {
+            return 500;
+        }
     }
 
     static Appliance create(String type, double hours) {

@@ -29,18 +29,36 @@ public class CollegeFeeCounter {
     }
 
     static class DayScholar extends Student implements BusUser {
-        DayScholar(String name) { super(name); }
-        double baseFee() { return 40000; }
+        DayScholar(String name) {
+            super(name);
+        }
+
+        @Override
+        double baseFee() {
+            return 40000;
+        }
     }
 
     static class Hosteller extends Student {
-        Hosteller(String name) { super(name); }
-        double baseFee() { return 40000 + 60000; }
+        Hosteller(String name) {
+            super(name);
+        }
+
+        @Override
+        double baseFee() {
+            return 40000 + 60000;
+        }
     }
 
     static class ScholarshipStudent extends Student implements BusUser {
-        ScholarshipStudent(String name) { super(name); }
-        double baseFee() { return 20000; }
+        ScholarshipStudent(String name) {
+            super(name);
+        }
+
+        @Override
+        double baseFee() {
+            return 20000;
+        }
     }
 
     static Student create(String type, String name) {

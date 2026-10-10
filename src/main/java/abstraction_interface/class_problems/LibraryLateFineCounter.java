@@ -18,18 +18,36 @@ public class LibraryLateFineCounter {
     }
 
     static class Book extends LibraryItem {
-        Book(String title, int daysLate) { super(title, daysLate); }
-        double fine() { return 2.0 * daysLate; }
+        Book(String title, int daysLate) {
+            super(title, daysLate);
+        }
+
+        @Override
+        double fine() {
+            return 2.0 * daysLate;
+        }
     }
 
     static class Dvd extends LibraryItem {
-        Dvd(String title, int daysLate) { super(title, daysLate); }
-        double fine() { return Math.min(5.0 * daysLate, 50.0); }
+        Dvd(String title, int daysLate) {
+            super(title, daysLate);
+        }
+
+        @Override
+        double fine() {
+            return Math.min(5.0 * daysLate, 50.0);
+        }
     }
 
     static class Magazine extends LibraryItem {
-        Magazine(String title, int daysLate) { super(title, daysLate); }
-        double fine() { return 1.0 * daysLate; }
+        Magazine(String title, int daysLate) {
+            super(title, daysLate);
+        }
+
+        @Override
+        double fine() {
+            return 1.0 * daysLate;
+        }
     }
 
     static LibraryItem create(String type, String title, int daysLate) {

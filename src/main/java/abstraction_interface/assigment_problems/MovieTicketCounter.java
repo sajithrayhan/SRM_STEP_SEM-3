@@ -22,18 +22,36 @@ public class MovieTicketCounter {
     }
 
     static class RegularTicket extends Ticket {
-        RegularTicket(int count) { super(count); }
-        double price() { return 150; }
+        RegularTicket(int count) {
+            super(count);
+        }
+
+        @Override
+        double price() {
+            return 150;
+        }
     }
 
     static class PremiumTicket extends Ticket {
-        PremiumTicket(int count) { super(count); }
-        double price() { return 250; }
+        PremiumTicket(int count) {
+            super(count);
+        }
+
+        @Override
+        double price() {
+            return 250;
+        }
     }
 
     static class ReclinerTicket extends Ticket {
-        ReclinerTicket(int count) { super(count); }
-        double price() { return 400; }
+        ReclinerTicket(int count) {
+            super(count);
+        }
+
+        @Override
+        double price() {
+            return 400;
+        }
     }
 
     static Ticket create(String seat, int count) {

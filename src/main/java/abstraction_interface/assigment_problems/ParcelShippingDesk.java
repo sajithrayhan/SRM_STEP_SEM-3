@@ -24,20 +24,46 @@ public class ParcelShippingDesk {
     }
 
     static class StandardParcel extends Parcel {
-        StandardParcel(double w, double v) { super(w, v); }
-        double charge() { return 40 + 10 * weightKg; }
+        StandardParcel(double w, double v) {
+            super(w, v);
+        }
+
+        @Override
+        double charge() {
+            return 40 + 10 * weightKg;
+        }
     }
 
     static class ExpressParcel extends Parcel implements Insurable {
-        ExpressParcel(double w, double v) { super(w, v); }
-        double charge() { return 80 + 15 * weightKg; }
-        public double insurance() { return INSURANCE_RATE * declaredValue; }
+        ExpressParcel(double w, double v) {
+            super(w, v);
+        }
+
+        @Override
+        double charge() {
+            return 80 + 15 * weightKg;
+        }
+
+        @Override
+        public double insurance() {
+            return INSURANCE_RATE * declaredValue;
+        }
     }
 
     static class FragileParcel extends Parcel implements Insurable {
-        FragileParcel(double w, double v) { super(w, v); }
-        double charge() { return 40 + 10 * weightKg + 50; }
-        public double insurance() { return INSURANCE_RATE * declaredValue; }
+        FragileParcel(double w, double v) {
+            super(w, v);
+        }
+
+        @Override
+        double charge() {
+            return 40 + 10 * weightKg + 50;
+        }
+
+        @Override
+        public double insurance() {
+            return INSURANCE_RATE * declaredValue;
+        }
     }
 
     static Parcel create(String type, double w, double v) {
