@@ -33,6 +33,10 @@ public class StopWordFilteredWordFrequency {
     }
 
     public static void main(String[] args) {
-        printFilteredWordFrequency("The mentor was great, the session was great and clear.");
+        try {
+            printFilteredWordFrequency("The mentor was great, the session was great and clear.");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

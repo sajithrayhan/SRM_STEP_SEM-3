@@ -17,7 +17,11 @@ public class FileExtensionValidator {
     }
 
     public static void main(String[] args) {
-        System.out.println(validateFileExtension("Assignment1.PDF"));   // Accepted
-        System.out.println(validateFileExtension("notes.txt"));         // Rejected
+        try {
+            System.out.println(validateFileExtension("Assignment1.PDF"));   // Accepted
+            System.out.println(validateFileExtension("notes.txt"));         // Rejected
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

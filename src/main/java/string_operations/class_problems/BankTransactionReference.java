@@ -35,7 +35,11 @@ public class BankTransactionReference {
     }
 
     public static void main(String[] args) {
-        System.out.println(validateAndFormat(normalizeReference(" hdf03022600042 ")));
-        System.out.println(validateAndFormat(normalizeReference("12F03022600042")));
+        try {
+            System.out.println(validateAndFormat(normalizeReference(" hdf03022600042 ")));
+            System.out.println(validateAndFormat(normalizeReference("12F03022600042")));
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

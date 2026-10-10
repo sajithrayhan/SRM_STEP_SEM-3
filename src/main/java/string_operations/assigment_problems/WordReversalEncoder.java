@@ -19,6 +19,10 @@ public class WordReversalEncoder {
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseEachWord("hello club"));    // olleh bulc
+        try {
+            System.out.println(reverseEachWord("hello club"));    // olleh bulc
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

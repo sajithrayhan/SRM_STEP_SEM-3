@@ -11,7 +11,11 @@ public class AtmPinLengthValidator {
     }
 
     public static void main(String[] args) {
-        checkPinLength("482");
-        checkPinLength("4820");
+        try {
+            checkPinLength("482");
+            checkPinLength("4820");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

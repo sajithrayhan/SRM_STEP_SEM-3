@@ -12,7 +12,11 @@ public class ProductInventoryCsvParser {
     }
 
     public static void main(String[] args) {
-        parseInventoryRecord("Wireless Mouse,WM-2201,150");
-        parseInventoryRecord("Wireless Mouse,150");
+        try {
+            parseInventoryRecord("Wireless Mouse,WM-2201,150");
+            parseInventoryRecord("Wireless Mouse,150");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

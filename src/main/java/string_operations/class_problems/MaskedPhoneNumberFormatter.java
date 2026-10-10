@@ -17,7 +17,11 @@ public class MaskedPhoneNumberFormatter {
     }
 
     public static void main(String[] args) {
-        System.out.println(maskPhoneNumber("9876543210"));   // XXXXXX-3210
-        System.out.println(maskPhoneNumber("98765"));        // Invalid phone number
+        try {
+            System.out.println(maskPhoneNumber("9876543210"));   // XXXXXX-3210
+            System.out.println(maskPhoneNumber("98765"));        // Invalid phone number
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

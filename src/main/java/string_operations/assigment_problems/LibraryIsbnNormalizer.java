@@ -32,7 +32,11 @@ public class LibraryIsbnNormalizer {
     }
 
     public static void main(String[] args) {
-        System.out.println(validateAndFormat(normalizeCode(" pen2026004251 ")));
-        System.out.println(validateAndFormat(normalizeCode("12N2026004251")));
+        try {
+            System.out.println(validateAndFormat(normalizeCode(" pen2026004251 ")));
+            System.out.println(validateAndFormat(normalizeCode("12N2026004251")));
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

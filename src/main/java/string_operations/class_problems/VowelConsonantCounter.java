@@ -20,6 +20,10 @@ public class VowelConsonantCounter {
     }
 
     public static void main(String[] args) {
-        countVowelsAndConsonants("Java Programming");      // Vowels: 5 | Consonants: 10
+        try {
+            countVowelsAndConsonants("Java Programming");      // Vowels: 5 | Consonants: 10
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }

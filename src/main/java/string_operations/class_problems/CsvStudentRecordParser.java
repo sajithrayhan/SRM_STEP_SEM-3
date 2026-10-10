@@ -12,7 +12,11 @@ public class CsvStudentRecordParser {
     }
 
     public static void main(String[] args) {
-        parseStudentRecord("Ananya Verma,RA2211003010123,CSE");
-        parseStudentRecord("Ananya Verma,CSE");
+        try {
+            parseStudentRecord("Ananya Verma,RA2211003010123,CSE");
+            parseStudentRecord("Ananya Verma,CSE");
+        } catch (RuntimeException exception) {
+            System.out.println("Error: " + exception.getMessage());
+        }
     }
 }
