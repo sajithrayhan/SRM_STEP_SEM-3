@@ -20,21 +20,51 @@ public class CampusParkingChargeCalculator {
     }
 
     static class Bike extends Vehicle {
-        Bike(int h) { super(h); }
-        String type() { return "BIKE"; }
-        double charge() { return 10.0 * hours; }
+        Bike(int h) {
+            super(h);
+        }
+
+        @Override
+        String type() {
+            return "BIKE";
+        }
+
+        @Override
+        double charge() {
+            return 10.0 * hours;
+        }
     }
 
     static class Car extends Vehicle {
-        Car(int h) { super(h); }
-        String type() { return "CAR"; }
-        double charge() { return 30.0 + 20.0 * (hours - 1); }
+        Car(int h) {
+            super(h);
+        }
+
+        @Override
+        String type() {
+            return "CAR";
+        }
+
+        @Override
+        double charge() {
+            return 30.0 + 20.0 * (hours - 1);
+        }
     }
 
     static class Truck extends Vehicle {
-        Truck(int h) { super(h); }
-        String type() { return "TRUCK"; }
-        double charge() { return Math.max(50.0 * hours, 100.0); }
+        Truck(int h) {
+            super(h);
+        }
+
+        @Override
+        String type() {
+            return "TRUCK";
+        }
+
+        @Override
+        double charge() {
+            return Math.max(50.0 * hours, 100.0);
+        }
     }
 
     static Vehicle create(String type, int hours) {

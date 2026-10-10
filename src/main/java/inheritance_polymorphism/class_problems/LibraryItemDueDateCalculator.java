@@ -27,18 +27,36 @@ public class LibraryItemDueDateCalculator {
     }
 
     static class Book extends LibraryItem {
-        Book(String title) { super(title); }
-        int borrowDays() { return 14; }
+        Book(String title) {
+            super(title);
+        }
+
+        @Override
+        int borrowDays() {
+            return 14;
+        }
     }
 
     static class Dvd extends LibraryItem {
-        Dvd(String title) { super(title); }
-        int borrowDays() { return 7; }
+        Dvd(String title) {
+            super(title);
+        }
+
+        @Override
+        int borrowDays() {
+            return 7;
+        }
     }
 
     static class Magazine extends LibraryItem {
-        Magazine(String title) { super(title); }
-        int borrowDays() { return 3; }
+        Magazine(String title) {
+            super(title);
+        }
+
+        @Override
+        int borrowDays() {
+            return 3;
+        }
     }
 
     static LibraryItem create(String type, String title) {

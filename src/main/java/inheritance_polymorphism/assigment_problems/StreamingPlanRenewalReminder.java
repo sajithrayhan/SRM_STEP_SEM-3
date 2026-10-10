@@ -24,18 +24,36 @@ public class StreamingPlanRenewalReminder {
     }
 
     static class BasicPlan extends Plan {
-        BasicPlan(String n, LocalDate d) { super(n, d); }
-        int validityDays() { return 30; }
+        BasicPlan(String n, LocalDate d) {
+            super(n, d);
+        }
+
+        @Override
+        int validityDays() {
+            return 30;
+        }
     }
 
     static class StandardPlan extends Plan {
-        StandardPlan(String n, LocalDate d) { super(n, d); }
-        int validityDays() { return 90; }
+        StandardPlan(String n, LocalDate d) {
+            super(n, d);
+        }
+
+        @Override
+        int validityDays() {
+            return 90;
+        }
     }
 
     static class PremiumPlan extends Plan {
-        PremiumPlan(String n, LocalDate d) { super(n, d); }
-        int validityDays() { return 365; }
+        PremiumPlan(String n, LocalDate d) {
+            super(n, d);
+        }
+
+        @Override
+        int validityDays() {
+            return 365;
+        }
     }
 
     static Plan create(String type, String name, LocalDate start) {

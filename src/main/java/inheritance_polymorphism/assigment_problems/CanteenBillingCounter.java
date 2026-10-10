@@ -20,21 +20,51 @@ public class CanteenBillingCounter {
     }
 
     static class Student extends Customer {
-        Student(double bill) { super(bill); }
-        String type() { return "STUDENT"; }
-        double finalAmount() { return bill * 0.90; }
+        Student(double bill) {
+            super(bill);
+        }
+
+        @Override
+        String type() {
+            return "STUDENT";
+        }
+
+        @Override
+        double finalAmount() {
+            return bill * 0.90;
+        }
     }
 
     static class Staff extends Customer {
-        Staff(double bill) { super(bill); }
-        String type() { return "STAFF"; }
-        double finalAmount() { return bill * 0.95; }
+        Staff(double bill) {
+            super(bill);
+        }
+
+        @Override
+        String type() {
+            return "STAFF";
+        }
+
+        @Override
+        double finalAmount() {
+            return bill * 0.95;
+        }
     }
 
     static class Guest extends Customer {
-        Guest(double bill) { super(bill); }
-        String type() { return "GUEST"; }
-        double finalAmount() { return bill + 10; }
+        Guest(double bill) {
+            super(bill);
+        }
+
+        @Override
+        String type() {
+            return "GUEST";
+        }
+
+        @Override
+        double finalAmount() {
+            return bill + 10;
+        }
     }
 
     static Customer create(String type, double bill) {

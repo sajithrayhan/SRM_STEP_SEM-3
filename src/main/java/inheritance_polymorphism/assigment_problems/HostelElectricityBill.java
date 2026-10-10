@@ -20,9 +20,19 @@ public class HostelElectricityBill {
     }
 
     static class SingleRoom extends Room {
-        SingleRoom(double units) { super(units); }
-        String type() { return "SINGLE"; }
-        double bill() { return 8 * units; }
+        SingleRoom(double units) {
+            super(units);
+        }
+
+        @Override
+        String type() {
+            return "SINGLE";
+        }
+
+        @Override
+        double bill() {
+            return 8 * units;
+        }
     }
 
     static class SharedRoom extends Room {
@@ -34,14 +44,32 @@ public class HostelElectricityBill {
             this.occupants = occupants;
         }
 
-        String type() { return "SHARED"; }
-        double bill() { return 6 * units / occupants; }
+
+        @Override
+        String type() {
+            return "SHARED";
+        }
+
+        @Override
+        double bill() {
+            return 6 * units / occupants;
+        }
     }
 
     static class AcRoom extends Room {
-        AcRoom(double units) { super(units); }
-        String type() { return "AC"; }
-        double bill() { return 10 * units + 200; }
+        AcRoom(double units) {
+            super(units);
+        }
+
+        @Override
+        String type() {
+            return "AC";
+        }
+
+        @Override
+        double bill() {
+            return 10 * units + 200;
+        }
     }
 
     public static void main(String[] args) {

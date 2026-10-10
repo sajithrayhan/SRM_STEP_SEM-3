@@ -25,21 +25,49 @@ public class ExaminationQuestionGrader {
     }
 
     static class McqQuestion extends Question {
-        McqQuestion(String c, String s, double p) { super(c, s, p); }
-        String type() { return "MCQ"; }
-        double score() { return studentAnswer.equals(correctAnswer) ? points : 0; }
+        McqQuestion(String c, String s, double p) {
+            super(c, s, p);
+        }
+
+        @Override
+        String type() {
+            return "MCQ";
+        }
+
+        @Override
+        double score() {
+            return studentAnswer.equals(correctAnswer) ? points : 0;
+        }
     }
 
     static class TrueFalseQuestion extends Question {
-        TrueFalseQuestion(String c, String s, double p) { super(c, s, p); }
-        String type() { return "TF"; }
-        double score() { return studentAnswer.equals(correctAnswer) ? points : 0; }
+        TrueFalseQuestion(String c, String s, double p) {
+            super(c, s, p);
+        }
+
+        @Override
+        String type() {
+            return "TF";
+        }
+
+        @Override
+        double score() {
+            return studentAnswer.equals(correctAnswer) ? points : 0;
+        }
     }
 
     static class EssayQuestion extends Question {
-        EssayQuestion(String c, String s, double p) { super(c, s, p); }
-        String type() { return "ESSAY"; }
+        EssayQuestion(String c, String s, double p) {
+            super(c, s, p);
+        }
 
+        @Override
+        String type() {
+            return "ESSAY";
+        }
+
+
+        @Override
         double score() {
             String answer = studentAnswer.toLowerCase();
             int matched = 0;

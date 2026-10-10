@@ -20,21 +20,51 @@ public class PaymentSystemFeeCalculation {
     }
 
     static class CardPayment extends Payment {
-        CardPayment(double amount) { super(amount); }
-        String type() { return "CARD"; }
-        double finalAmount() { return amount * 1.02; }
+        CardPayment(double amount) {
+            super(amount);
+        }
+
+        @Override
+        String type() {
+            return "CARD";
+        }
+
+        @Override
+        double finalAmount() {
+            return amount * 1.02;
+        }
     }
 
     static class WalletPayment extends Payment {
-        WalletPayment(double amount) { super(amount); }
-        String type() { return "WALLET"; }
-        double finalAmount() { return amount * 1.01; }
+        WalletPayment(double amount) {
+            super(amount);
+        }
+
+        @Override
+        String type() {
+            return "WALLET";
+        }
+
+        @Override
+        double finalAmount() {
+            return amount * 1.01;
+        }
     }
 
     static class BankTransferPayment extends Payment {
-        BankTransferPayment(double amount) { super(amount); }
-        String type() { return "BANKTRANSFER"; }
-        double finalAmount() { return amount; }
+        BankTransferPayment(double amount) {
+            super(amount);
+        }
+
+        @Override
+        String type() {
+            return "BANKTRANSFER";
+        }
+
+        @Override
+        double finalAmount() {
+            return amount;
+        }
     }
 
     static Payment create(String type, double amount) {

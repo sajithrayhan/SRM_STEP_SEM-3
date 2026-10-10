@@ -21,15 +21,35 @@ public class DeliveryFeeCalculator {
     }
 
     static class StandardDelivery extends Delivery {
-        StandardDelivery(double w, double d) { super(w, d); }
-        String type() { return "STANDARD"; }
-        double fee() { return 5 + 0.50 * weight + 0.10 * distance; }
+        StandardDelivery(double w, double d) {
+            super(w, d);
+        }
+
+        @Override
+        String type() {
+            return "STANDARD";
+        }
+
+        @Override
+        double fee() {
+            return 5 + 0.50 * weight + 0.10 * distance;
+        }
     }
 
     static class ExpressDelivery extends Delivery {
-        ExpressDelivery(double w, double d) { super(w, d); }
-        String type() { return "EXPRESS"; }
-        double fee() { return 15 + 1.00 * weight + 0.20 * distance; }
+        ExpressDelivery(double w, double d) {
+            super(w, d);
+        }
+
+        @Override
+        String type() {
+            return "EXPRESS";
+        }
+
+        @Override
+        double fee() {
+            return 15 + 1.00 * weight + 0.20 * distance;
+        }
     }
 
     static class InternationalDelivery extends Delivery {
@@ -40,8 +60,16 @@ public class DeliveryFeeCalculator {
             this.customsFee = customsFee;
         }
 
-        String type() { return "INTERNATIONAL"; }
-        double fee() { return 25 + 2.00 * weight + 0.50 * distance + customsFee; }
+
+        @Override
+        String type() {
+            return "INTERNATIONAL";
+        }
+
+        @Override
+        double fee() {
+            return 25 + 2.00 * weight + 0.50 * distance + customsFee;
+        }
     }
 
     public static void main(String[] args) {

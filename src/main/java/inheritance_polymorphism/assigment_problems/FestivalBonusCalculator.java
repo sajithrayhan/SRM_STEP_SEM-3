@@ -20,18 +20,36 @@ public class FestivalBonusCalculator {
     }
 
     static class FullTimeEmployee extends Employee {
-        FullTimeEmployee(String n, double s) { super(n, s); }
-        double bonus() { return monthlySalary * 0.10; }
+        FullTimeEmployee(String n, double s) {
+            super(n, s);
+        }
+
+        @Override
+        double bonus() {
+            return monthlySalary * 0.10;
+        }
     }
 
     static class PartTimeEmployee extends Employee {
-        PartTimeEmployee(String n, double s) { super(n, s); }
-        double bonus() { return monthlySalary * 0.05; }
+        PartTimeEmployee(String n, double s) {
+            super(n, s);
+        }
+
+        @Override
+        double bonus() {
+            return monthlySalary * 0.05;
+        }
     }
 
     static class InternEmployee extends Employee {
-        InternEmployee(String n, double s) { super(n, s); }
-        double bonus() { return 2000; }
+        InternEmployee(String n, double s) {
+            super(n, s);
+        }
+
+        @Override
+        double bonus() {
+            return 2000;
+        }
     }
 
     static Employee create(String type, String name, double salary) {

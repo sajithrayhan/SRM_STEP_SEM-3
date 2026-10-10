@@ -20,15 +20,35 @@ public class PublicTransportFareCalculator {
     }
 
     static class BusJourney extends Journey {
-        BusJourney(double d) { super(d); }
-        String type() { return "BUS"; }
-        double fare() { return Math.min(2 + 0.10 * distance, 10); }
+        BusJourney(double d) {
+            super(d);
+        }
+
+        @Override
+        String type() {
+            return "BUS";
+        }
+
+        @Override
+        double fare() {
+            return Math.min(2 + 0.10 * distance, 10);
+        }
     }
 
     static class TrainJourney extends Journey {
-        TrainJourney(double d) { super(d); }
-        String type() { return "TRAIN"; }
-        double fare() { return 3 + 0.15 * distance; }
+        TrainJourney(double d) {
+            super(d);
+        }
+
+        @Override
+        String type() {
+            return "TRAIN";
+        }
+
+        @Override
+        double fare() {
+            return 3 + 0.15 * distance;
+        }
     }
 
     static class MetroJourney extends Journey {
@@ -39,8 +59,16 @@ public class PublicTransportFareCalculator {
             this.peakHourFactor = peakHourFactor;
         }
 
-        String type() { return "METRO"; }
-        double fare() { return (1.50 + 0.20 * distance) * peakHourFactor; }
+
+        @Override
+        String type() {
+            return "METRO";
+        }
+
+        @Override
+        double fare() {
+            return (1.50 + 0.20 * distance) * peakHourFactor;
+        }
     }
 
     public static void main(String[] args) {
