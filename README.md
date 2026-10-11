@@ -1,28 +1,50 @@
 # Step Semester 3
 
-STEP Semester 3 coursework, SRM Institute of Science and Technology.
+Coursework for the STEP training programme, Semester 3, at SRM Institute of Science and Technology.
 
-## Repository Structure
+**Author:** Sajith Rayhan M (RA2511030010208)
+**Language:** Java
+
+## Contents
+
+| Session | Topic | Programs | Code |
+|:-------:|-------|:--------:|------|
+| 1 | Strings | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_1/src/main/java/string_fundamentals) |
+| 2 | String operations | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_2/src/main/java/string_operations) |
+| 4 | Programming fundamentals and arrays | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_4/src/main/java/programming_fundamentals) |
+| 5 | Arrays and methods | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_5/src/main/java/arrays_methods) |
+| 6 | Classes and objects revision | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_6/src/main/java/classes_objects) |
+| 7 | Encapsulation | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_7/src/main/java/encapsulation) |
+| 8 | Inheritance and polymorphism | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_8/src/main/java/inheritance_polymorphism) |
+| 9 | Abstraction and interfaces | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_9/src/main/java/abstraction_interface) |
+| 10 | Data structures foundations | 15 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_10/src/main/java/data_structures) |
+
+Session 3 was an introduction with no problems to submit.
+
+## How the Repository Is Organised
+
+The repository follows the branching model from the STEP GitHub structure guide.
 
 | Branch | Purpose |
 |--------|---------|
 | main | Documentation and daily progress log (this README only) |
-| develop | Empty Java project skeleton |
-| feature/session_n | Solved class problems and assignment problems for session n |
+| develop | Empty Java project skeleton and editor settings |
+| feature/session_n | Solved problems for session n, created from develop |
 
-Inside each feature branch the code is organised by topic. Every topic package contains two sub-packages: `class_problems` (practice problems) and `assigment_problems` (take-home assignment problems).
+Inside each feature branch the code is grouped by topic. Every topic contains two sub-packages:
 
-| Session | Branch | Topic | Package |
-|---------|--------|-------|---------|
-| 1 | feature/session_1 | Strings | string_fundamentals |
-| 2 | feature/session_2 | String operations | string_operations |
-| 4 | feature/session_4 | Programming fundamentals and arrays | programming_fundamentals |
-| 5 | feature/session_5 | Arrays and methods | arrays_methods |
-| 6 | feature/session_6 | Classes and objects revision | classes_objects |
-| 7 | feature/session_7 | Encapsulation | encapsulation |
-| 8 | feature/session_8 | Inheritance and polymorphism | inheritance_polymorphism |
-| 9 | feature/session_9 | Abstraction and interfaces | abstraction_interface |
-| 10 | feature/session_10 | Data structures foundations | data_structures |
+- `class_problems`: practice problems from the class session.
+- `assigment_problems`: take-home assignment problems (the spelling follows the guide).
+
+## Running the Code
+
+Open the repository in VS Code with the Java Extension Pack, check out a feature branch, and run any class with a `main` method. From a terminal:
+
+```bash
+git checkout feature/session_9
+javac -d out $(find src -name "*.java")
+java -cp out abstraction_interface.class_problems.GardenPlotAreaReport
+```
 
 ---
 
@@ -42,11 +64,12 @@ Inside each feature branch the code is organised by topic. Every topic package c
 - Every program was compiled and run against the sample input and output given in its problem statement.
 
 **Next Session Plan:**
-- Revise Week 1 to Week 9 topics for the assessment test.
+- Revise Week 1 to Week 10 topics for the assessment test.
 - Add the next weekly problems on a new feature branch created from develop.
 
 **Issues Faced:**
 - The Week 8 delivery fee sample output in the problem PDF does not match its own pricing rules (the rules give 24.00 and 145.00, the sample shows 29.00 and 155.00). The solution follows the written rules.
 - The Week 5 ranking problems leave the thresholds and scoring formula open, so these were derived from the sample outputs.
+- Classroom pages loaded very slowly during Week 10 submission, so a few submissions needed retries.
 
 ---
