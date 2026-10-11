@@ -30,7 +30,7 @@ Inside each feature branch the code is organised by topic. Every topic package c
 
 **Today's Work:**
 - Completed the class problems and assignment problems for Sessions 1, 2, 4, 5, 6, 7, 8, 9 and 10, one feature branch per session.
-- Session 10: Vowel and consonant counter, word reverser and palindrome checker, even and odd counts, in-place array reversal, digit sum and reversal, prime checker, factorial, grade assignment, leap year detector, student result cards, with quiz and concept answers; busiest bus row, class attendance tracker, duty roster rotation, exam score band counter (with complexity analysis).
+- Session 10: Vowel and consonant counter, word reverser and palindrome checker, even and odd counts, in-place array reversal, digit sum and reversal, prime checker, factorial, grade assignment, leap year detector, student result cards, with quiz and concept answers; busiest bus row, class attendance tracker, duty roster rotation, exam score band counter, second-best score (with complexity analysis).
 - Session 9: Garden plot report, staff pay, library fines, electricity billing, travel booking; movie tickets, parcel shipping, college fees, cab fares, appliance energy report; quiz and concept answers.
 - Session 8: Payment fees, library due dates, delivery fees, exam grader, transport fares; canteen billing, parking, hostel electricity, festival bonus, streaming renewals; quiz and concept answers.
 - Session 7: Piggy bank, scorecard, name tag, locker, attendance sheet; health bar, playlist, password checker, traffic light, shopping cart.
