@@ -1,4 +1,4 @@
-# SRM STEP Semester 3
+# Step Semester 3
 
 Coursework for the STEP training programme, Semester 3, at SRM Institute of Science and Technology.
 
@@ -9,15 +9,15 @@ Coursework for the STEP training programme, Semester 3, at SRM Institute of Scie
 
 | Session | Topic | Programs | Code |
 |:-------:|-------|:--------:|------|
-| 1 | Strings | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_1/src/main/java/string_fundamentals) |
-| 2 | String operations | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_2/src/main/java/string_operations) |
-| 4 | Programming fundamentals and arrays | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_4/src/main/java/programming_fundamentals) |
-| 5 | Arrays and methods | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_5/src/main/java/arrays_methods) |
-| 6 | Classes and objects revision | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_6/src/main/java/classes_objects) |
-| 7 | Encapsulation | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_7/src/main/java/encapsulation) |
-| 8 | Inheritance and polymorphism | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_8/src/main/java/inheritance_polymorphism) |
-| 9 | Abstraction and interfaces | 10 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_9/src/main/java/abstraction_interface) |
-| 10 | Data structures foundations | 15 | [Open](https://github.com/sajithrayhan/SRM_STEP_SEM-3/tree/feature/session_10/src/main/java/data_structures) |
+| 1 | Strings | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_1/src/main/java/string_fundamentals) |
+| 2 | String operations | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_2/src/main/java/string_operations) |
+| 4 | Programming fundamentals and arrays | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_4/src/main/java/programming_fundamentals) |
+| 5 | Arrays and methods | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_5/src/main/java/arrays_methods) |
+| 6 | Classes and objects revision | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_6/src/main/java/classes_objects) |
+| 7 | Encapsulation | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_7/src/main/java/encapsulation) |
+| 8 | Inheritance and polymorphism | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_8/src/main/java/inheritance_polymorphism) |
+| 9 | Abstraction and interfaces | 10 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_9/src/main/java/abstraction_interface) |
+| 10 | Data structures foundations | 15 | [Open](https://github.com/sajithrayhan/Step_semester_3/tree/feature/session_10/src/main/java/data_structures) |
 
 Session 3 was an introduction with no problems to submit.
 
@@ -28,7 +28,7 @@ The repository follows the branching model from the STEP GitHub structure guide.
 | Branch | Purpose |
 |--------|---------|
 | main | Documentation and daily progress log (this README only) |
-| develop | Empty Java project skeleton and editor settings |
+| develop | Empty Java project skeleton |
 | feature/session_n | Solved problems for session n, created from develop |
 
 Inside each feature branch the code is grouped by topic. Every topic contains two sub-packages:
